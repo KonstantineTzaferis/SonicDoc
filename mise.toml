@@ -1,2 +1,6 @@
 [tools]
 python = "3.13.2"
+
+[tasks."uvicorn:dev:up"]
+description = "Start the local dev stack (reload) using dev target"
+run = "uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload"
